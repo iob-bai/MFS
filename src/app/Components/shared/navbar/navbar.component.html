@@ -1,0 +1,15 @@
+<mat-toolbar class="toolbar" >
+  <span class="nav-icon-label">
+    <a href="" class="logo">My F# School</a>
+    <mat-slide-toggle class="small" [checked]="checked" (change)="toggleChanges($event)" ></mat-slide-toggle>
+  </span>
+  <span class="nav-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu" class="">
+    <img [src]="user?.profileImageUrl" alt="userImg" class="userImg">
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item >	<mat-icon>person_outline</mat-icon>Profile</button>
+    <button mat-menu-item (click)="logOut()"><mat-icon>exit_to_app</mat-icon>LogOut</button>
+  </mat-menu>
+
+</mat-toolbar>

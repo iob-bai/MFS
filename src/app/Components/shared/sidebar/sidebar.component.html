@@ -1,0 +1,49 @@
+<!-- 
+<mat-list role="list" class="mat-list">
+    <mat-list-item role="listitem" *ngFor="let data of navData">
+        <button mat-stroked-button>
+            <a href="" class="sidenav-nav-link" routerLink="data.routeLink">
+                <i class="sidennav-link-icon" [class] = 'data.icon'></i>
+                <span class="siddenav-link-text" *ngIf="collapsed"> {{data.label}} </span>
+            </a>
+        </button>
+    </mat-list-item>
+  
+  </mat-list> -->
+
+  <mat-divider></mat-divider>
+  <mat-list class="list">   
+  <mat-list-item *ngFor="let data of menuItems">
+    <mat-icon> {{data.icon}}</mat-icon>
+    <a href="" class="list-item" [routerLink]="data.routeLink">
+           {{data.label}}
+    </a>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+ 
+
+</mat-list>
+<!-- <ul class="nav">
+  <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+      <a class="nav-link" routerLink="[menuItem.path]">
+          <i class="material-icons">{{menuItem.icon}}</i>
+          <p>{{menuItem.title}}</p>
+      </a>
+  </li>
+</ul> -->
+<!-- 
+<mat-accordion>
+
+ <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon>supervised_user_circle</mat-icon>
+      </mat-panel-title>
+      <mat-panel-description>
+        Users
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel>
+</mat-accordion> -->

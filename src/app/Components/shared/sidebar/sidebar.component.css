@@ -1,0 +1,20 @@
+.list-item{
+    margin-left: 0.5rem;
+    text-decoration:none ;
+    text-align: center;
+    color: white;
+}
+mat-list-item{
+    background-color: transparent;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  
+
+}
+
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }

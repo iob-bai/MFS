@@ -1,0 +1,35 @@
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form [formGroup]="logInForm">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="username" placeholder="Email" required="" formControlName = "username">
+					<input type="password" name="pswd" placeholder="Password" required="" formControlName = "password">
+					<button>
+						<span *ngIf="!showLoading" (click)=" onLogin(logInForm.value)">Login</span>
+						<span *ngIf="showLoading">Loading...</span>
+					</button>
+				</form>
+			</div>
+
+			<div class="login">
+			
+				<form [formGroup]="registerForm">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="firstName" placeholder="firstName" required formControlName = "firstName">
+					<input type="text" name="lastName" placeholder="lastName" required formControlName = "lastName">
+					<input type="text" name="username" placeholder="username" required formControlName = "username">
+					<input type="email" name="email" placeholder="e-mail" required formControlName = "email">
+					
+					<button (click)=" onRegister(registerForm.value)" >
+						<span *ngIf="!showLoading">Sign up</span>
+						<span *ngIf="showLoading">Loading...</span>
+					</button>
+					
+				</form>
+			</div>
+	</div>
+</body>
+<!-- </html> -->
