@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <h1 class="mat-h1">User</h1>
+    <mat-tab-group color="accent" class="mat-tab-group" >
+      <mat-tab label="Profil">  
+        <mat-card>
+          <app-profile></app-profile>
+        </mat-card>
+      </mat-tab>
+      <mat-tab label="security">
+        <mat-card> 
+          <app-user-security-pass></app-user-security-pass>
+        </mat-card>
+      </mat-tab>
+      <mat-tab label="notification">
+      <mat-card> Simple card</mat-card>
+      </mat-tab>
+  
+      </mat-tab-group>
+</div>
+
+<!-- <app-profile></app-profile> -->
+<!-- <mat-tab label="Billing">  
+  <mat-card>
+    Simple card
+  </mat-card>
+</mat-tab>
+<mat-tab label="security">
+  <mat-card> 
+    <app-user-security-pass></app-user-security-pass>
+  </mat-card>
+</mat-tab>
+<mat-tab label="notification">
+<mat-card> Simple card</mat-card>
+</mat-tab> -->
+
+<!-- <mat-tab [label]="tab.label" *ngFor="let tab of tabs">
+  <mat-card class="Profie-tab">
+{{ tab.content }}
+  </mat-card>
+</mat-tab> -->

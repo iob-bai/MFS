@@ -1,0 +1,132 @@
+<!-- <div class="grid-container">
+    <h1 class="mat-h1">Dashboard</h1>
+    <mat-grid-list cols="3" rowHeight="250px" >
+      <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+        <mat-card class="dashboard-card">
+          <mat-card-header>
+            <mat-card-title>
+              {{user?.username}} {{ card.title }}
+              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu" >
+                <button mat-menu-item>Modifier image</button>
+                <button mat-menu-item>Modifier le profile</button>
+              </mat-menu>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="dashboard-card-content">
+            <img [src]="user?.profileImageUrl" alt="profileImage" class="profileImage">
+            <div class="profilecontent">{{user?.firstName}} , {{user?.lastName}}</div>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+   -->
+<div class="grid-container-fluid">
+  <h1 class="mat-h1">Profile</h1>
+  <mat-grid-list cols="3">
+    <mat-grid-tile [colspan]="profileImageCard[0]" [rowspan]="profileImageCard[1]">
+      <mat-card class="profil-card">
+        <mat-card-header>
+          <mat-card-title>
+            <h2 class="imgCardTitle"> {{user?.username}} Profile </h2>
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>open_in_new</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Modifier image</button>
+
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <img [src]="user?.profileImageUrl" alt="profileImage" class="profileImage">
+          
+          <mat-card-title class="profilecontent">{{user?.firstName}} , {{user?.lastName}}</mat-card-title>
+          <mat-card-subtitle>{{user?.role}}</mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <!-- --------------formProfilUser------------------------------------------------------------------------------------------------- -->
+
+    <mat-grid-tile [colspan]="profileDescriptionCard[0]" [rowspan]="profileDescriptionCard[1]">
+      <mat-card class="profil-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{user?.username}} Details
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu2" aria-label="Toggle menu" >
+              <span class="material-symbols-outlined">
+                app_registration
+              </span>
+            </button>
+            <mat-menu #menu2="matMenu">
+              <button mat-menu-item>Modifier Form</button>
+
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <!-- --------------------------------------- -->
+          <form>
+            <!-- Form Group (username)-->
+            <div class="mb-3">
+                <label class="small mb-1" for="inputUsername">Username (how your name will appear to other users on the site)</label>
+                <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username" value="username">
+            </div>
+            <!-- Form Row-->
+            <div class="row gx-3 mb-3">
+                <!-- Form Group (first name)-->
+                <div class="col-md-6">
+                    <label class="small mb-1" for="inputFirstName">First name</label>
+                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" value="Valerie">
+                </div>
+                <!-- Form Group (last name)-->
+                <div class="col-md-6">
+                    <label class="small mb-1" for="inputLastName">Last name</label>
+                    <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" value="Luna">
+                </div>
+            </div>
+            <!-- Form Row        -->
+            <div class="row gx-3 mb-3">
+                <!-- Form Group (organization name)-->
+                <div class="col-md-6">
+                    <label class="small mb-1" for="inputOrgName">Organization name</label>
+                    <input class="form-control" id="inputOrgName" type="text" placeholder="Enter your organization name" value="Start Bootstrap">
+                </div>
+                <!-- Form Group (location)-->
+                <div class="col-md-6">
+                    <label class="small mb-1" for="inputLocation">Location</label>
+                    <input class="form-control" id="inputLocation" type="text" placeholder="Enter your location" value="San Francisco, CA">
+                </div>
+            </div>
+            <!-- Form Group (email address)-->
+            <div class="mb-3">
+                <label class="small mb-1" for="inputEmailAddress">Email address</label>
+                <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="name@example.com">
+            </div>
+            <!-- Form Row-->
+            <div class="row gx-3 mb-3">
+                <!-- Form Group (phone number)-->
+                <div class="col-md-6">
+                    <label class="small mb-1" for="inputPhone">Phone number</label>
+                    <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number" value="555-123-4567">
+                </div>
+                <!-- Form Group (birthday)-->
+                <div class="col-md-6">
+                    <label class="small mb-1" for="inputBirthday">Birthday</label>
+                    <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988">
+                </div>
+            </div>
+            <!-- Save changes button-->
+            <button class="btn btn-primary" type="button">Save changes</button>
+        </form>
+          
+          <!-- --------------------------------------- -->
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
