@@ -22,15 +22,15 @@ import { Component, OnInit } from '@angular/core';
 
 const navbarData = [
   {
+    routeLink :'dashboard',icon:'dashboard',label: 'dashboard'
+  },
+  {
     routeLink :'users',icon:'supervised_user_circle',label: 'Users'
   },{
-    routeLink :'teacher',icon:'supervised_user_circle',label: 'Teacher'
+    routeLink :'student',icon:'face',label: 'Student'
   },
   {
-    routeLink :'student',icon:'supervised_user_circle',label: 'Student'
-  },
-  {
-    routeLink :'Login',icon:'supervised_user_circle',label: 'Login'
+    routeLink :'Login',icon:'date_range',label: 'Login'
   }
 ]
 

@@ -5,14 +5,17 @@ import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { NgMaterialModule } from './ng-material.module';
 import { AdminLayoutComponent } from '../layouts/admin-layout/admin-layout.component';
-import { TeacherLayoutComponent } from '../layouts/teacher-layout/teacher-layout.component';
 
-import { StudentLayoutComponent } from '../layouts/student-layout/student-layout.component';
 import { RouterModule } from '@angular/router';
 import { CustumRoutingModule } from './custum-routing.module';
-import { UsersLayoutComponent } from '../layouts/users-layout/users-layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TeacherLayoutComponent } from '../pages/teacher-layout/teacher-layout.component';
+import { StudentLayoutComponent } from '../pages/student-layout/student-layout.component';
+import { UsersLayoutComponent } from '../pages/users-layout/users-layout.component';
+import { ProfileComponent } from '../pages/users-layout/profile/profile.component';
+import { UserSecurityPassComponent } from '../pages/users-layout/user-security-pass/user-security-pass.component';
+import { DashboardLayoutComponent } from '../pages/dashboard-layout/dashboard-layout.component';
 
 
 @NgModule({
@@ -23,8 +26,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminLayoutComponent,
     TeacherLayoutComponent,
     StudentLayoutComponent,
-    UsersLayoutComponent
-   
+    UsersLayoutComponent,
+    ProfileComponent,
+    UserSecurityPassComponent,
+    DashboardLayoutComponent,
   ],
   imports: [
     CommonModule,
@@ -43,6 +48,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UsersLayoutComponent,
     HttpClientModule,
     ReactiveFormsModule,
+    ProfileComponent
     
    
   ]

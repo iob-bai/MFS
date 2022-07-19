@@ -4,20 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './Components/shared/navbar/navbar.component';
-import { SidebarComponent } from './Components/shared/sidebar/sidebar.component';
-import { FooterComponent } from './Components/shared/footer/footer.component';
-import { AdminLayoutComponent } from './Components/layouts/admin-layout/admin-layout.component';
 
 import { SharedComponentModule } from './Components/Moduls/shared-component.module';
 
 import { RouterModule } from '@angular/router';
 import { LoginLayoutComponent } from './Components/layouts/login-layout/login-layout.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { AuthenticationGuard } from './guard/authentication.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginLayoutComponent,
+    
+    
+   
 
    
 
@@ -32,9 +34,9 @@ import { LoginLayoutComponent } from './Components/layouts/login-layout/login-la
     //NgMaterialModule,
     SharedComponentModule,
     RouterModule,
-  
+    
   ],
-  providers: [],
+  providers: [AuthenticationGuard,{provide :HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true/*create multiple instences*/}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
